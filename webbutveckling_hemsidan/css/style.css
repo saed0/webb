@@ -1,0 +1,938 @@
+:root {
+    --bg1:#141414;
+    --bg2:#0881CC;
+    --text1:rgb(241, 241, 241);
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text1);
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    transition: .5s all;
+}
+
+
+body {
+    background: var(--bg1);
+    height: 200vh;
+    
+    position: relative;
+}
+
+header {
+    padding: 50px;
+    width: 100%;
+    height: 12vh;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+header .logo {
+    width: 30%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    animation: fade-in-from-top 1s linear;
+    background: linear-gradient(to right, var(--bg1),var(--bg2) 25%);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+header .logo img {
+    width: 50px;
+    padding-right: 20px;
+}
+
+
+@keyframes fade-in-from-top {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+@keyframes floatY {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(1%,15%);
+    }
+
+    50% {
+        transform: translate(2%,10%);
+    }
+
+    75% {
+        transform: translate(2%,-10%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+header nav {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: nav-fade 1s linear;
+}
+
+
+@keyframes nav-fade {
+    from{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header nav ul {
+    width: 15%;
+    cursor: pointer;
+}
+
+header nav ul li {
+    cursor: pointer;
+    width: 100%;
+}
+
+header nav ul li a {
+    padding: 0 20px;
+
+}
+
+header nav ul li a:hover {
+    color: rgb(145, 196, 237);
+}
+
+
+
+header nav ul:nth-child(5) {
+    width: 30%;
+    padding: 15px;
+    border-radius: 20px;
+    /* border: 2px solid var(--bg2); */
+    background: linear-gradient(to right, var(--bg2),var(--bg1));
+    text-align: center;
+}
+
+header nav ul:nth-child(5):hover {
+    background: var(--text1);
+}
+
+header nav ul li:nth-child(5):hover a {
+    color: black;
+    font-weight: bold;
+}
+
+
+header .toggle {
+    width: 20%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+header .toggle .center {
+    width: 50%;
+    height: 80%;
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+header .toggle .center span {
+    width: 60px;
+    height: 4px;
+    background: white;
+    
+}
+
+
+
+
+header .toggle.active .center span:nth-child(1) {
+    
+    transform: translateY(0px) rotate(45deg);
+    margin-top: 40%;
+}
+
+header .toggle.active .center span:nth-child(2) {
+    
+    
+    transform:translateX(200px);
+    opacity: 0;
+
+}
+
+header .toggle.active .center span:nth-child(3) {
+    
+    margin-top: -50%;
+    transform: translateY(0px) rotate(-45deg);
+    
+}  
+
+
+
+
+
+/*  Main element  */
+
+main {
+    width: 100%;
+
+    height: fit-content;
+   
+
+}
+
+main .section-1 {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg1);
+    margin-top: -2%;
+}
+
+main .info-container {
+    width: 80%;
+    height: fit-content;
+    margin: 2vh 5vh;
+   
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    animation: fade-in-from-left .6s linear;
+    
+}
+
+
+
+main .info-container h6 {
+    font-size: 15px;
+    padding-bottom:18px;
+}
+
+
+main .info-container p {
+    width: 60%;
+}
+
+main .info-container .nav-btns {
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8%;
+    text-align: center;
+    
+}
+
+
+main .info-container .nav-btns button {
+    background: var(--text1);
+    border: transparent;
+    color: black;
+    width: 45%;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .info-container .nav-btns button:hover {
+    background: transparent;
+    border: 2px solid var(--text1);
+    color: var(--text1);
+}
+
+
+
+main .info-container .nav-btns .watch-gameplay {
+    width: 50%;
+    height: 6vh;
+    /* border: 2px solid var(--text1); */
+    background: linear-gradient(to right, rgb(41, 40, 40),var(--bg2));
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+
+main .info-container .nav-btns .watch-gameplay h5 {
+    width: 100%;
+}
+
+main .info-container .nav-btns .watch-gameplay:hover {
+    background: var(--text1);
+    
+}
+
+main .info-container .nav-btns .watch-gameplay:hover h5 {
+    color: black;
+    font-weight: bold;
+}
+
+main .info-container .nav-btns .watch-gameplay:hover i {
+    color: black;
+    
+
+}
+
+
+main .info-container h2 {
+    width: 80%;
+    font-size:95px;
+    line-height:1;
+    margin:0px 0px 45px;
+    /* font-family: 'Bungee Spice', cursive; */
+    font-family: 'Oswald', sans-serif;
+}
+
+
+main .info-container .game-platform {
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    margin-top: 8%;
+    padding-left: 20px;
+}
+
+main .info-container .game-platform i {
+    font-size: 25px;
+    padding-right: 10px;
+    width: 8%;
+    cursor: pointer;
+}
+
+main .info-container .game-platform i:hover {
+    color: rgb(145, 196, 237);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+main .image-container {
+    width: 50%;
+    height: 60vh;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+
+
+main .image-container img {
+    width: 70vh;
+    animation: fade-in-from-bottom 1s linear;
+    animation-delay: 10s;
+    animation: floating 10s linear infinite;
+    
+
+}
+
+
+
+main .section-3 {
+    margin-top: 1%;
+    width: 100%;
+    height: 100vh;
+
+    /* background: linear-gradient(to bottom, var(--bg1) 90%,var(--bg2)); */
+    background:var(--bg1);
+}
+
+main .section-3 .text-section {
+    width: 100%;
+    height: 95vh;
+    margin-top: 5%;
+    border-top: 1px dashed var(--bg2);
+}
+
+main .section-3 .text-section .title {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background: linear-gradient(to right, white,var(--bg2) 95%);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+main .section-3 .text-section .text-body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .section-3 .text-section .text-body p {
+    width: 50%;
+    font-size: 18px;
+}
+
+main .section-3 .download-btn {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .section-3 .download-btn .button-shadow {
+    padding: 2px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, white, var(--bg2));
+
+}
+
+main .section-3 .download-btn .button-shadow:hover {
+    padding: 8px;
+}
+
+main .section-3 .download-btn .button-shadow .button {
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    background: var(--bg1);
+    padding: 15px 0;
+    width: 35vh;
+    cursor:pointer;
+}
+
+
+
+main .section-2 {
+    width: 100%;
+    height: 100vh;
+    margin-top: 5%;
+    background: var(--bg1);
+    overflow-y: scroll;
+    border-top: 1px dashed var(--bg2);
+}
+
+main .section-2::-webkit-scrollbar {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+  
+
+main .section-2 .some-text {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+
+main .section-2 .some-text img {
+    width: 150px;
+    filter: grayscale(59);
+}
+
+main .section-2 .video-container {
+    width: 90%;
+	max-width: 1100px;
+	margin:40px auto;
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
+}
+
+main .section-2 .video-container video {
+    width:100%;
+    height: 25vh;
+    border: 2px solid var(--bg2);
+}
+
+main .section-2 .video-container img {
+    width:100%;
+    height: 25vh;
+    border: 2px solid var(--bg2);
+}
+
+img.bg-img {
+    position: fixed;
+    top: 20%;
+    width: 100%;
+    z-index: -99;
+}
+
+
+.scroll-icon {
+    width: 20%;
+    height: 8vh;
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    z-index: 99;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 50px;
+    padding-bottom: 80px;
+}
+
+.scroll-icon i {
+    font-size: 45px;
+    width: 12vh;
+    height: 12vh;
+    color: var(--bg1);
+    background: linear-gradient(to right, var(--bg1),var(--bg2));
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: floating 2.5s linear infinite;
+    cursor: pointer;
+}
+
+.scroll-icon i:hover {
+    background: var(--bg1);
+    border: 2px solid var(--text1);
+    color: var(--text1);
+    animation: none;
+}
+
+
+
+
+footer {
+    width: 100%;
+    height: fit-content;
+    background: var(--bg2);
+
+}
+
+footer .wide-holder {
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    padding-bottom: 50px;
+    padding-top: 30px;
+
+}
+
+footer .wide-holder h3 {
+    padding-bottom: 30px;
+}
+
+footer .wide-holder p {
+    padding-bottom: 30px;
+    color: rgb(210, 210, 210);
+}
+
+
+footer .wide-holder .social-media {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    
+}
+
+footer .wide-holder .social-media i {
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+footer .bottom-holder {
+    width: 100%;
+    height: 15vh;
+    background: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+footer .bottom-holder h4 {
+    letter-spacing: 2px;
+}
+
+
+
+
+main .hidden {
+
+    position: absolute;
+    width: 0%;
+    opacity: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: var(--bg1);
+    margin-top: 3%;
+    border-top: 2px solid var(--text1);
+    padding-top: 50px;
+    right: 0;
+
+
+    z-index: 250;
+    
+}
+
+main .hidden.active {
+    opacity: 1;
+    width: 100%;
+    
+}
+
+main .hidden nav {
+    width: 100%;
+    height: fit-content;
+    
+    text-align: center;
+    margin-top: 5%;
+}
+main .hidden li {
+    margin: 4%;
+    
+}
+
+main .hidden .input-bar {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+main .hidden .input-bar .input-area {
+    width: 50%;
+    height: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+main .hidden .input-bar .input-area input::placeholder {
+    padding-left:10px;
+}
+main .hidden .input-bar .input-area input {
+    width: 85%;
+    background: none;
+    border:transparent;
+    outline: none;
+    padding-left: 10px;
+
+}
+
+main .hidden .input-bar .input-area .input-icon {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid var(--text1);
+}
+
+main .hidden .input-bar .input-area .input-icon i {
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+@keyframes floating {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    25% {
+        transform: translate(0%,15%);
+    }
+
+    50% {
+        transform: translate(0%,10%);
+    }
+
+    75% {
+        transform: translate(0%,-20%) rotateX(180deg);
+        
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+    
+}
+
+@keyframes fade-in-from-bottom {
+    from{
+        opacity: 0;
+        transform: translateY(400px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+main form {
+    width: 60%;
+    height: 100%;
+    display: flex;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main form .login-section {
+    width: 80%;
+    height: 80%;
+    border: 1px solid white;
+    /* border-top-left-radius: 25px;
+    border-top-right-radius: 25px; */
+
+}
+
+main form .login-section .login-header {
+    width: 100%;
+    height: 8vh;
+    font-size: 25px;
+    background: var(--color-main);
+    border: 2px solid whitesmoke;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:royalblue;
+    
+    /* border-top-left-radius: 25px;
+    border-top-right-radius: 25px; */
+}
+
+main form .login-section .login-middle {
+    width: 100%;
+    height: 6vh;
+}
+
+main form .login-section label {
+    display: block;
+    width: 100%;
+
+    justify-content: left;
+
+    padding: 10px;
+    margin-left: 10%;
+    
+}
+
+main form .login-section label .cred-input {
+    margin-top: 1%;
+    border:2px solid white;
+    width: 80%;
+    height: 5vh;
+    display: flex;;
+}
+
+main form .login-section label .cred-input input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: transparent;
+    padding-left: 5px;
+}
+
+main form .login-section label .cred-input:hover {
+    border: 2px solid royalblue;
+}
+
+main form .login-section label button {
+    width: 15vh;
+    height: 4vh;
+    border: 2px solid white;
+    background: transparent;
+
+
+    transition: .5s all;
+    transition: border-bottom 1s all;
+    cursor: pointer;
+}
+
+main form .login-section label button:hover {
+    border:2px solid royalblue;
+    border-bottom: 5px solid royalblue;
+
+}
+
+main form .login-section .xix {
+    width: 100%;
+    height: 12vh;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom:20px;
+    margin-top: 4%;
+}
+
+
+
+
+
+
+
+
+
+@keyframes fade-in-from-left {
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+@media only screen and (max-width:1173px) {
+    header nav {
+        display: none;
+    }
+
+    header .toggle {
+        display: flex;
+    }
+
+    main .info-container .one-in-one h2 {
+        width: 100%;
+        font-size: 80px;
+    }
+
+}
+
+@media only screen and (max-width:520px) {
+    header .logo {
+        width: 50%;
+    }
+} 
+
+
+@media only screen and (max-width:930px) {
+    main .info-container {
+        width: 100%;
+    } 
+
+    main .info-container .one-in-one {
+        width: 100%;
+    }
+
+    main .info-container .one-in-one h2 {
+        width: 100%;
+        font-size: 60px;
+    }
+
+    main .info-container p {
+        width: 100%;
+    }
+
+    main .info-container .nav-btns {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    main .info-container .game-platform {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    main .info-container .game-platform i {
+        width: 15%;
+    }
+
+    header nav {display: none;}
+
+    main .image-container {
+        display: none;
+    }
+
+    
+
+
+    
+    .scroll-icon {
+        display: none;
+    }
+
+}

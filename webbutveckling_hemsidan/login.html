@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitex</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://media.discordapp.net/attachments/785983551170150451/1077755085892898929/hacker_1.png">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker& family=Poppins: wght@100;200; 300; 400; 500; 600; 700; 800; 900&display=swap" rel="stylesheet">
+     -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+
+
+<body>
+
+
+   
+    <header>
+        <div class="logo">
+            <img src="https://media.discordapp.net/attachments/785983551170150451/1077755085892898929/hacker_1.png" alt="">
+            <h2>Sitex-topia</h2>
+        </div>
+
+        <nav>
+            <ul><li><a href="#">Home</a></li></ul>
+            <ul><li><a onclick="v1()">Success</a></li></ul>
+            <ul><li><a onclick="v2()">About</a></li></ul>
+            <ul><li><a onclick="v3()">Contact</a></li></ul>
+            <ul><li><a onclick="v1()">Get started</a></li></ul>
+
+        </nav>
+
+        <div class="toggle" onclick="toggleMenu()" id="toggle-target">
+
+            <div class="center">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+
+
+
+    </header>
+
+    <main style="height:90vh;display: flex;
+    justify-content: center;">
+
+        <div class="hidden">
+            <nav>
+                <ul><li><a href="#">Home</a></li></ul>
+                <ul><li><a onclick="v1()">Success</a></li></ul>
+                <ul><li><a onclick="v2()">About</a></li></ul>
+                <ul><li><a onclick="v3()">Contact</a></li></ul>
+                <ul><li><a onclick="v1()">Get started</a></li></ul>
+            </nav>        
+        </div>
+
+        
+        <form action="" method="POST" onsubmit="return false;">
+            <!-- {% csrf_token %} -->
+
+            <div class="login-section">
+
+                <div class="login-header">
+                    Login
+                </div>
+
+                <div class="login-middle">
+
+                </div>
+
+
+                <label for="">
+                    Username
+
+                    <div class="cred-input">
+                        <input type="text" placeholder="Username" name="username" id="username" required>
+                    </div>
+                </label>
+
+
+                <label for="">
+                    Password
+
+                    <div class="cred-input">
+                        <input type="password" placeholder="******" name="password" id="pass" required>
+                    </div>
+
+                </label>
+
+                <label for="" style="padding-top:25px;">
+                    <button onclick="loginFunction()"><i class="fas fa-lock"></i> Login</button>
+                </label>
+
+
+
+
+                <div class="xix">
+
+                    <p>Haven't signed up yet?</p>
+                    <a href="" style="color:royalblue;">Signup</a>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+        
+
+        
+
+    </main>
+
+
+    <footer style="position: absolute;bottom: 0;">
+
+        <div class="wide-holder" id="s4">
+            <h3>Contact me</h3>
+            <p>If you want to work with me for a 50% split, make sure to contact me on discord <span style="font-size: 20px;color: black;">roxa#0417</span></p>
+
+  
+
+        </div>
+
+        <div class="bottom-holder">
+            <h4>Copyright © 2022 S-Topia. Design By <span style="color:rgb(170, 56, 104);">ubåt</span></h4>
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+
+    
+</body>
+</html>
